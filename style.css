@@ -1,0 +1,73 @@
+body{
+
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    
+    background-color: #121212;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.textbar{
+    position: fixed;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 50px;
+    max-width: 500px;
+}
+.text-area{
+    color:white;
+   height: 100%;
+   border: none;
+   outline: none;
+   background-color: #2A2929;
+   border-radius: 10px;
+   padding: 3px;
+   width: 100%;
+}
+.text-button:hover{
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.text-button{
+    transition: background 0.5s ease-out;
+    border: none;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 50%;
+    transform: translateY(50%);
+    position: absolute;
+    background-color: #696767;
+}
+.logo{
+    width: 20rem;
+    height: 20rem;
+    position: fixed;
+    display: inline-block;
+    left: 50%;
+    bottom: 25%;
+    transform-origin: center;
+    animation: logodondurmek 2s linear infinite;
+    transform: translateX(-50%) rotateZ(0deg);
+}
+.logo-foto{
+    max-width: 20rem;
+    max-height: 20rem;
+}
+.send-button{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* Animations */
+@keyframes logodondurmek{
+    0% {transform: translateX(-50%) rotateZ(0deg)};
+    100% {transform: translateX(-50%) rotateZ(360deg);}
+}
