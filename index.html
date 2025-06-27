@@ -43,7 +43,7 @@
   body:JSON.stringify({que:tx.value}),
  }).then((value) => {
   if (!value.ok)
-  alert("ERROR!");
+  alert("ERROR!"+" "+value.statusText);
  else
  alert("SUCAS");
  });
