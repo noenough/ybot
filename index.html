@@ -19,13 +19,36 @@
         </div>
         <div class="messages-bar"></div>
         <div class="textbar">
-        <input class="text-area" type="text">
-        <button class="text-button"><span style="background: #2A7B9B;
-background: linear-gradient(180deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" class="material-symbols-outlined">
-arrow_forward_ios
+        <input class="text-area" type="text" id="tekst">
+        <button id="dugme" class="text-button"><span style="" class="yonetekst">
+>
 </span></button>   
     </div>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-   
+   <script>
+    var tx=document.getElementById("tekst");
+    var bt=document.getElementById("dugme");
+    bt.addEventListener('click', getdata);
+    var p=document.createElement('p');
+    p.style.color='white';
+     
+    document.body.append(p);
+    function getdata(){
+ fetch('http://127.0.0.1:8080/que',{
+  method: "POST",
+    headers: {
+    'Content-Type': 'application/json',
+  },
+  body:JSON.stringify({que:tx.value}),
+ }).then((value) => {
+  if (!value.ok)
+  alert("ERROR!");
+ else
+ alert("SUCAS");
+ });
+ }
+
+ </script>
 </body>
 </html>

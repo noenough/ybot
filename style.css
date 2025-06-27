@@ -1,16 +1,18 @@
-body{
+body {
 
     margin: 0;
     padding: 0;
     width: 100vw;
-    
+
     background-color: #121212;
 }
-.main{
+
+.main {
     display: flex;
     flex-direction: column;
 }
-.textbar{
+
+.textbar {
     position: fixed;
     left: 50%;
     bottom: 12px;
@@ -19,34 +21,41 @@ body{
     height: 50px;
     max-width: 500px;
 }
-.text-area{
-    color:white;
-   height: 100%;
-   border: none;
-   outline: none;
-   background-color: #2A2929;
-   border-radius: 10px;
-   padding: 3px;
-   width: 100%;
+
+.text-area {
+    color: white;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: #2A2929;
+    border-radius: 10px;
+    padding: 3px;
+    width: 100%;
 }
-.text-button:hover{
+
+.text-button:hover {
     background-color: #ffffff;
     cursor: pointer;
 }
-.text-button{
+
+.text-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: background 0.5s ease-out;
     border: none;
     top: 0;
     right: 0;
-    justify-content: center;
-    align-items: center;
     height: 30px;
     border-radius: 50%;
-    transform: translateY(50%);
+    transform: translateY(45%);
     position: absolute;
     background-color: #696767;
+    height: 2rem;
+    width: 2rem;
 }
-.logo{
+
+.logo {
     width: 20rem;
     height: 20rem;
     position: fixed;
@@ -57,17 +66,33 @@ body{
     animation: logodondurmek 2s linear infinite;
     transform: translateX(-50%) rotateZ(0deg);
 }
-.logo-foto{
+
+.logo-foto {
     max-width: 20rem;
     max-height: 20rem;
 }
-.send-button{
-    height: 1.5rem;
-    width: 1.5rem;
-}
+
 
 /* Animations */
-@keyframes logodondurmek{
-    0% {transform: translateX(-50%) rotateZ(0deg)};
-    100% {transform: translateX(-50%) rotateZ(360deg);}
+@keyframes logodondurmek {
+    0% {
+        transform: translateX(-50%) rotateZ(0deg)
+    }
+
+    ;
+
+    100% {
+        transform: translateX(-50%) rotateZ(360deg);
+    }
+}
+
+.yonetekst {
+    background: #2A7B9B;
+    background: linear-gradient(180deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2rem;
+    
+    justify-content: center;
+    align-items: center;
 }
