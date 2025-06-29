@@ -15,40 +15,17 @@
 </head>
 <body>
     <div class="main">
-        <div class="logo"><img class="logo-foto" src="./assets/images/ybotlogo.png"></div>
+        <div class="logo"><img class="logo-foto" src="./assets/images/ybotlogo.png" id="logojs"></div>
         </div>
-        <div class="messages-bar"></div>
-        <div class="textbar">
+        <div class="messages-bar" id="messagesbarjs">
+        </div>
+        <section id="lastsecid" class="bosluk"></section>
+        <div class="textbar" id="txbar">
         <input class="text-area" type="text" id="tekst">
-        <button id="dugme" class="text-button"><span style="" class="yonetekst">
->
-</span></button>   
+        <button id="dugme" class="text-button"><span class="yonetekst">></span></button>   
     </div>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-   <script>
-    var tx=document.getElementById("tekst");
-    var bt=document.getElementById("dugme");
-    bt.addEventListener('click', getdata);
-    var p=document.createElement('p');
-    p.style.color='white';
-     
-    document.body.append(p);
-    function getdata(){
- fetch('http://127.0.0.1:8080/que',{
-  method: "POST",
-    headers: {
-    'Content-Type': 'application/json',
-  },
-  body:JSON.stringify({que:tx.value}),
- }).then((value) => {
-  if (!value.ok)
-  alert("ERROR!"+" "+value.statusText);
- else
- alert("SUCAS");
- });
- }
 
- </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+   <script src="./scrpt.js"></script>
 </body>
 </html>
