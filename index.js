@@ -8,7 +8,8 @@ app.use(cors());
 let lastAnswer="";
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
-const ai = new GoogleGenerativeAI("AIzaSyChCkTa6Rmxoj7HzBGgVhjfecHA-9LTKkw");
+
+const ai = new GoogleGenerativeAI("Your api key");
 
 app.post('/que', async (req, res) => {
   try {
