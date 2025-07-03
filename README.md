@@ -20,7 +20,7 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/ybot.git
+[git clone https://github.com/your-username/ybot.git](https://github.com/noenough/ybot.git)
 cd ybot
 ```
 ![ybot_home](https://github.com/user-attachments/assets/93e76498-6eb4-4a8b-a89c-8ea7dd07a0a4)
